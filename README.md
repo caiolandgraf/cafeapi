@@ -166,7 +166,7 @@ Thank you
 
 - [Caio Landgraf](https://github.com/caiolandgraf) (Developer)
 - [Suporte Informatiká](https://github.com/caiolandgraf) (Team)
-- [All Contributors](https://github.com/caiolandgraf/uploader/contributors) (This Rock)
+- [All Contributors](https://github.com/caiolandgraf/cafeapi/contributors) (This Rock)
 
 ## License
 
