@@ -2,12 +2,12 @@
 require __DIR__ . "/assets/config.php";
 require __DIR__ . "/../vendor/autoload.php";
 
-use RobsonVLeite\CafeApi\Me;
+use CaioLandgraf\CafeApi\Me;
 
 $me = new Me(
-    "localhost/fsphp/cafeapi/",
-    "caiolandgraf@outlook.com",
-    "12345678"
+    "localhost/name_of_your_project/cafeapi/",
+    "youremail@email.com",
+    "password"
 );
 
 /**
@@ -67,7 +67,7 @@ if ($photo) {
 ?>
     <form action="" method="post" enctype="multipart/form-data">
         <input type="file" name="photo"/>
-        <button>Atualizar</button>
+        <button>Atualizar</button> //Update
     </form>
 <?php
 

@@ -49,12 +49,12 @@ Para mais detalhes sobre como usar, veja uma pasta de exemplo no diretório do c
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use RobsonVLeite\CafeApi\Me;
+use CaioLandgraf\CafeApi\Me;
 
 $me = new Me(
-    "suaapi.url.com",
-    "seu@email.com.br",
-    "suasenha"
+    "yourapi.url.com",
+    "your@email.com.br",
+    "yourpassword"
 );
 
 //me
@@ -62,8 +62,8 @@ $user = $me->me();
 
 //update
 $user->update([
-    "first_name" => "Caio",
-    "last_name" => "Landgraf",
+    "first_name" => "YOUR",
+    "last_name" => "NAME",
     "genre" => "male",
     "datebirth" => "2006-08-12",
     "document" => "888888888"
@@ -87,12 +87,12 @@ if ($user->error()) {
 
 require __DIR__ . "/../vendor/autoload.php";
 
-use RobsonVLeite\CafeApi\Invoices;
+use CaioLandgraf\CafeApi\Invoices;
 
 $invoices = new Invoices(
-    "suaapi.url.com",
-    "seu@email.com.br",
-    "suasenha"
+    "yourapi.url.com",
+    "your@email.com.br",
+    "yourpassword"
 );
 
 //index
@@ -110,7 +110,7 @@ $index = $invoices->index([
 $invoices->create([
     "wallet_id" => 23,
     "category_id" => 3,
-    "description" => "Pagamento Cartão",
+    "description" => "Pagamento Cartão", //Payment Card
     "type" => "expense",
     "value" => "25000.20",
     "due_at" => "2019-10-02",
@@ -127,7 +127,7 @@ $invoiceId = 91;
 $invoices->update($invoiceId, [
     "wallet_id" => 23,
     "category_id" => 3,
-    "description" => "Pagamento Cartão",
+    "description" => "Pagamento Cartão", //Payment Card
     "value" => "25000.20",
     "due_day" => 25,
     "status" => "paid"

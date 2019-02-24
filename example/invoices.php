@@ -2,12 +2,12 @@
 require __DIR__ . "/assets/config.php";
 require __DIR__ . "/../vendor/autoload.php";
 
-use RobsonVLeite\CafeApi\Invoices;
+use CaioLandgraf\CafeApi\Invoices;
 
 $invoices = new Invoices(
-    "localhost/fsphp/cafeapi/",
-    "caiolandgraf@outlook.com",
-    "12345678"
+    "localhost/name_of_your_project/cafeapi/",
+    "youremail@email.com",
+    "password"
 );
 
 /**
@@ -138,7 +138,7 @@ if ($invoiceUpdate->error()) {
         <input type="text" name="value" value="<?= $value("value"); ?>"/>
         <input type="text" name="due_day" value="<?= date("d", strtotime($value("due_at"))); ?>"/>
         <input type="text" name="status" value="<?= $value("status"); ?>"/>
-        <button>Atualizar</button>
+        <button>Atualizar</button> //Update
     </form>
     <?php
 }
@@ -152,5 +152,5 @@ $delete = $invoices->delete(91);
 if ($delete->error()) {
     echo "<p class='error'>{$delete->error()->message}</p>";
 } else {
-    echo "<p>Lançamento foi excluído com sucesso!</p>";
+    echo "<p>Lançamento foi excluído com sucesso!</p>"; //Launch deleted successfully!
 }
